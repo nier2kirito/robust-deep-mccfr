@@ -1,6 +1,13 @@
+"""
+Utility functions for strategy evaluation and exploitability calculation.
+
+This module provides functions for creating and evaluating strategies,
+calculating exploitability, and testing various strategy profiles.
+"""
+
 import random
 from typing import Dict, Tuple, List
-from games.kuhn import KuhnGame, KuhnState, Card, Action
+from .games.kuhn import KuhnGame, KuhnState, Card, Action
 from collections import defaultdict
 import itertools
 

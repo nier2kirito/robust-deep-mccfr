@@ -13,7 +13,7 @@ except Exception as e:
     MATPLOTLIB_AVAILABLE = False
 
 # Assuming kuhn.py is in the same directory or accessible via PYTHONPATH
-from kuhn import KuhnGame, KuhnState, Action, Card, card_to_string
+from games.kuhn import KuhnGame, KuhnState, Action, Card, card_to_string
 
 # Import exploitability functions from utils.py
 from utils import KuhnStrategy, calculate_exploitability

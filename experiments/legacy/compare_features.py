@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from kuhn import KuhnGame, Card, Action
+from games.kuhn import KuhnGame, Card, Action
 
 def old_meaningless_features(state, player_card):
     """Old approach: meaningless categorical features."""

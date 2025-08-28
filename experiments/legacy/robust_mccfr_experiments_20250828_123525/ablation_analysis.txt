@@ -1,0 +1,27 @@
+ABLATION STUDY ANALYSIS
+==================================================
+
+Ranking by Final Exploitability:
+1. no_exploration_mixing: 0.062810
+2. target_200: 0.075302
+3. eps_0.05: 0.077550
+4. target_500: 0.092475
+5. no_weight_clipping: 0.112988
+6. var_0.5: 0.122904
+7. target_50: 0.122926
+8. clip_50: 0.130817
+9. maximal_risk: 0.145187
+10. eps_0.15: 0.147912
+11. no_prioritized_replay: 0.148305
+12. minimal_risk: 0.148820
+13. var_0.2: 0.155514
+14. minimal_configuration: 0.156016
+15. var_0.05: 0.158826
+16. balanced_approach: 0.161104
+17. no_variance_objective: 0.162907
+18. eps_0.20: 0.163131
+19. no_target_networks: 0.164247
+20. clip_5: 0.171644
+21. baseline: 0.171970
+22. clip_20: 0.178728
+23. no_baseline_subtraction: 0.182980

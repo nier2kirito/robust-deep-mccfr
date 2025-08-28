@@ -99,10 +99,12 @@ class KuhnState:
         returns = [0.0, 0.0] # Assuming 2 players based on the C++ code
 
         if self._history[-1] == Action.FOLD:
-            winner = self._current_player # The player who didn't fold
-            loser = 1 - self._current_player
-            returns[winner] = float(self._bets[loser]) # Winner gets loser's bet
-            returns[loser] = -float(self._bets[loser]) # Loser loses their bet
+            # FIXED: When a player folds, current_player is the NEXT player to act (who didn't fold)
+            # The player who folded is the PREVIOUS player (1 - current_player)
+            folder = 1 - self._current_player  # The player who just folded
+            winner = self._current_player       # The player who didn't fold
+            returns[winner] = float(self._bets[folder])   # Winner gets what folder bet
+            returns[folder] = -float(self._bets[folder])  # Folder loses their bet
         else:
             # Showdown: CHECK, CHECK or BET, CALL
             winning_player = 0 if self._player_cards[0].value > self._player_cards[1].value else 1

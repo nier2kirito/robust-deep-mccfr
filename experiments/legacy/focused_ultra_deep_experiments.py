@@ -17,7 +17,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
 # Import the existing components
-from kuhn import KuhnGame, KuhnState, Action, Card, card_to_string
+from games.kuhn import KuhnGame, KuhnState, Action, Card, card_to_string
 from utils import KuhnStrategy, calculate_exploitability
 from train2 import (
     get_state_features, UltraDeepNN, count_parameters, 
