@@ -1,4 +1,4 @@
-# Deep Learning Monte Carlo Counterfactual Regret Minimization (DL-MCCFR)
+# Robust Deep Monte Carlo Counterfactual Regret Minimization : Addressing Theoretical Risks in Neural Fictitious Self-Play
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -30,21 +30,14 @@ This library implements state-of-the-art algorithms for solving imperfect inform
 #### From Source (Recommended)
 
 ```bash
-git clone https://github.com/your-username/DL_MCCFR.git
-cd DL_MCCFR
+git clone https://github.com/your-username/robust-deep-mccfr.git
+cd robust-deep-mccfr
 pip install -e .
 ```
-
-#### Using pip
-
-```bash
-pip install dl-mccfr
-```
-
 ### Basic Usage
 
 ```python
-from dl_mccfr import DeepMCCFR, KuhnGame
+from deep_mccfr import DeepMCCFR, KuhnGame
 
 # Initialize the algorithm
 mccfr = DeepMCCFR(
@@ -63,7 +56,7 @@ print(f"Training time: {results['training_time']:.1f}s")
 ### Advanced Usage with Robust Features
 
 ```python
-from dl_mccfr import RobustDeepMCCFR, RobustMCCFRConfig
+from deep_mccfr import RobustDeepMCCFR, RobustMCCFRConfig
 
 # Configure robust training
 config = RobustMCCFRConfig(
@@ -107,7 +100,7 @@ The library includes several neural network architectures optimized for strategy
 The library includes extensive experimental frameworks for comparing different approaches:
 
 ```python
-from dl_mccfr.experiments import ExperimentRunner, get_ablation_configs
+from deep_mccfr.experiments import ExperimentRunner, get_ablation_configs
 
 # Run systematic ablation study
 runner = ExperimentRunner()
@@ -147,7 +140,7 @@ If you use this library in your research, please cite:
 @software{eljaafari2024dlmccfr,
   author = {El-Jaafari, Zakaria},
   title = {Deep Learning Monte Carlo Counterfactual Regret Minimization},
-  url = {https://github.com/your-username/DL_MCCFR},
+  url = {https://github.com/your-username/robust-deep-mccfr},
   version = {1.0.0},
   year = {2024}
 }
@@ -159,8 +152,8 @@ If you use this library in your research, please cite:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/DL_MCCFR.git
-cd DL_MCCFR
+git clone https://github.com/your-username/robust-deep-mccfr.git
+cd robust-deep-mccfr
 
 # Install development dependencies
 pip install -e ".[dev]"
@@ -178,8 +171,8 @@ mypy src/
 ### Project Structure
 
 ```
-DL_MCCFR/
-├── src/dl_mccfr/          # Main package
+robust-deep-mccfr/
+├── src/robust-deep-mccfr/          # Main package
 │   ├── games/             # Game implementations
 │   ├── networks.py        # Neural network architectures
 │   ├── mccfr.py          # Core MCCFR algorithms
