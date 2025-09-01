@@ -20,7 +20,7 @@ This library implements state-of-the-art algorithms for solving imperfect inform
 
 ### Supported Games
 
-- **Kuhn Poker**: A simplified poker variant perfect for testing and research
+- **Kuhn Poker**: A simplified poker variant perfect for testing and research                              -**Leduc Poker**: A poker variant that is more complex than Kuhn Poker, perfect for testing scalability and robustness.
 - **Extensible Framework**: Easy to add new imperfect information games
 
 ## 🚀 Quick Start
