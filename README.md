@@ -10,6 +10,9 @@ A PyTorch implementation of Monte Carlo Counterfactual Regret Minimization (MCCF
 
 This library implements state-of-the-art algorithms for solving imperfect information games using deep learning. It combines the theoretical foundations of Counterfactual Regret Minimization (CFR) with modern deep learning techniques to learn near-optimal strategies in complex game environments.
 
+👉 This is an implementation of the paper: [**Robust Deep Monte Carlo Counterfactual Regret Minimization: Addressing Theoretical Risks in Neural Fictitious Self-Play**](https://arxiv.org/abs/2509.00923).
+
+
 ### Key Features
 
 - **Multiple Neural Network Architectures**: From simple feedforward networks to advanced transformer-based architectures
@@ -113,24 +116,7 @@ for config in configs:
 runner.analyze_results()
 ```
 
-### Performance Benchmarks
 
-| Architecture | Parameters | Final Exploitability | Training Time |
-|-------------|------------|---------------------|---------------|
-| BaseNN | 0.5M | 0.001234 | 120s |
-| DeepResidualNN | 2.1M | 0.000876 | 180s |
-| UltraDeepNN | 8.4M | 0.000654 | 300s |
-| MegaTransformerNN | 15.2M | 0.000543 | 450s |
-
-*Results on Kuhn Poker with 10,000 training iterations*
-
-## 🔬 Research Applications
-
-This library has been used for research in:
-
-- **Game Theory**: Analyzing equilibrium strategies in imperfect information games
-- **Deep Learning**: Investigating neural network architectures for sequential decision making
-- **Multi-Agent Systems**: Studying learning dynamics in competitive environments
 
 ### Citation
 
@@ -138,9 +124,9 @@ If you use this library in your research, please cite:
 
 ```bibtex
 @software{eljaafari2024dlmccfr,
-  author = {El-Jaafari, Zakaria},
+  author = {El Jaafari, Zakaria},
   title = {Deep Learning Monte Carlo Counterfactual Regret Minimization},
-  url = {https://github.com/your-username/robust-deep-mccfr},
+  url = {https://github.com/nier2kirito/robust-deep-mccfr},
   version = {1.0.0},
   year = {2024}
 }
@@ -197,27 +183,6 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guid
 4. Ensure all tests pass
 5. Submit a pull request
 
-## 📚 Documentation
-
-### API Reference
-
-Complete API documentation is available at [https://dl-mccfr.readthedocs.io/](https://dl-mccfr.readthedocs.io/)
-
-### Tutorials
-
-- [Getting Started with Kuhn Poker](docs/tutorials/kuhn_poker.md)
-- [Neural Network Architectures Guide](docs/tutorials/networks.md)
-- [Advanced Training Techniques](docs/tutorials/advanced_training.md)
-- [Adding New Games](docs/tutorials/custom_games.md)
-
-### Examples
-
-Check the `examples/` directory for:
-
-- **Basic Training**: Simple MCCFR training loop
-- **Architecture Comparison**: Comparing different neural networks
-- **Ablation Studies**: Systematic feature analysis
-- **Custom Games**: How to implement new games
 
 ## 🔧 Configuration
 
